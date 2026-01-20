@@ -1,6 +1,10 @@
 # Redis::Replicator
 
-Ruby wrapper that acts as a Redis client but instead writes to several Redis instances.
+Ruby wrapper that acts as a Redis client but instead writes to several Redis
+instances.
+
+Originally built to handle switching Redis instances for a Ruby on Rails app
+with user sessions in Redis and not disconnecting anyone.
 
 ## Installation
 
@@ -27,7 +31,7 @@ redis = Redis::Replicator.new(
 
 Use it where Redis instances are expected.
 
-E.g.:
+E.g. for Rails sessions:
 
 ```rb
 Rails.application.config.session_store :redis_session_store,
