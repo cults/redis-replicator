@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Redis
-  module Replicator
+class Redis
+  class Replicator
     VERSION = "0.1.0"
   end
 end

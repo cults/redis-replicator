@@ -1,11 +1,26 @@
 AllCops:
   TargetRubyVersion: 3.2
+  NewCops: enable
+
+# Gemspec
+
+Gemspec/OrderedDependencies:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
+# Style
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  # Prefer [:a, :b] over %i[a b].
+  EnforcedStyle: brackets
 
 Style/TrailingCommaInArrayLiteral:
   # Prefer trailing commas in arrays:

@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
-require_relative "replicator/version"
-
+require "redis"
 require "connection_pool"
 
-module Redis
+require_relative "replicator/version"
+
+class Redis
   # Wrapper that acts as a Redis client.
-  module Replicator
+  class Replicator
     def initialize(urls:)
       @urls = urls
     end
