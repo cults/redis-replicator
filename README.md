@@ -7,6 +7,8 @@ Ruby wrapper that acts as a Redis client but instead writes to several Redis ins
 Add to your Gemfile:
 
 ```rb
+# Ruby wrapper that acts as a Redis client but instead writes to several Redis
+# instances.
 gem "redis-replicator", github: "cults/redis-replicator"
 ```
 
