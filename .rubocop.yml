@@ -1,0 +1,16 @@
+AllCops:
+  TargetRubyVersion: 3.2
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArrayLiteral:
+  # Prefer trailing commas in arrays:
+  #   [
+  #     1,
+  #     2,
+  #   ]
+  EnforcedStyleForMultiline: diff_comma
