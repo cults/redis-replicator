@@ -3,13 +3,17 @@ PATH
   specs:
     redis-replicator (0.1.0)
       connection_pool
+      redis
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.3)
+    binding_of_caller (1.0.1)
+      debug_inspector (>= 1.2.0)
     connection_pool (3.0.2)
     date (3.5.1)
+    debug_inspector (1.2.0)
     diff-lcs (1.6.2)
     erb (6.0.1)
     io-console (0.8.2)
@@ -28,6 +32,10 @@ GEM
       prettyprint
     prettyprint (0.2.0)
     prism (1.8.0)
+    proc_to_ast (0.2.0)
+      parser
+      rouge
+      unparser
     psych (5.3.1)
       date
       stringio
@@ -38,9 +46,14 @@ GEM
       erb
       psych (>= 4.0.0)
       tsort
+    redis (5.4.1)
+      redis-client (>= 0.22.0)
+    redis-client (0.26.3)
+      connection_pool
     regexp_parser (2.11.3)
     reline (0.6.3)
       io-console (~> 0.5)
+    rouge (4.7.0)
     rspec (3.13.2)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
@@ -53,6 +66,18 @@ GEM
     rspec-mocks (3.13.7)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
+    rspec-parameterized (2.0.1)
+      rspec-parameterized-core (>= 2, < 3)
+      rspec-parameterized-table_syntax (>= 2, < 3)
+    rspec-parameterized-core (2.0.1)
+      parser
+      prism
+      proc_to_ast (>= 0.2.0)
+      rspec (>= 2.13, < 4)
+      unparser
+    rspec-parameterized-table_syntax (2.1.0)
+      binding_of_caller
+      rspec-parameterized-core (>= 2, < 3)
     rspec-support (3.13.6)
     rubocop (1.82.1)
       json (~> 2.3)
@@ -74,6 +99,10 @@ GEM
     unicode-display_width (3.2.0)
       unicode-emoji (~> 4.1)
     unicode-emoji (4.2.0)
+    unparser (0.8.1)
+      diff-lcs (~> 1.6)
+      parser (>= 3.3.0)
+      prism (>= 1.5.1)
 
 PLATFORMS
   arm64-darwin-24
@@ -84,6 +113,7 @@ DEPENDENCIES
   rake (~> 13.0)
   redis-replicator!
   rspec (~> 3.0)
+  rspec-parameterized (~> 2.0)
   rubocop (~> 1.21)
 
 BUNDLED WITH

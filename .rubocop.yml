@@ -10,6 +10,18 @@ Gemspec/OrderedDependencies:
 Gemspec/RequiredRubyVersion:
   Enabled: false
 
+# Layout
+
+Layout/LineLength:
+  Max: 80
+
+# Metrics
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+    - "*.gemspec"
+
 # Style
 
 Style/StringLiterals:
